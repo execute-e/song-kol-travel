@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.section {
+    padding-block: rem(80);
+
+    @include mobile-l {
+        padding-block: rem(50);
+    }
+}

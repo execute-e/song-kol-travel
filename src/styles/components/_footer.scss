@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.footer {
+    background-color: var(--color-current);
+    color: var(--text-color-light);
+    padding-block: rem(40);
+
+    &__paragraph {
+        @include fluid-text(24, 20)
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+
+        @include tablet {
+            row-gap: rem(20);
+        }
+    }
+
+    &__soc1als {
+        display: flex;
+        column-gap: rem(30);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(20);
+    }
+}

@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.hero {
+    min-height: 100vh;
+    background: url(/main-bg.jpg) no-repeat;
+    background-size: cover;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+        padding-bottom: rem(80);
+    }
+
+    &__inner {
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(30);
+
+        @include laptop {
+            flex-direction: column;
+            justify-content: center;
+            row-gap: rem(40);
+            padding-top: rem(225);
+        }
+
+        @include mobile-l {
+            padding-top: rem(150);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        row-gap: rem(10);
+    }
+
+    &__extra {
+        display: flex;
+        column-gap: rem(40);
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: rem(10);
+
+        @include mobile-l {
+            column-gap: rem(10);
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        column-gap: rem(4);
+    }
+
+    &__buttons {
+        margin-top: rem(10);
+        display: flex;
+        column-gap: rem(40);
+        align-items: center;
+    }
+}

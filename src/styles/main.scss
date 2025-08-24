@@ -1,0 +1,21 @@
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+@use 'normalize';
+
+@use 'components/header';
+@use 'components/burger-button';
+@use 'components/burger-menu';
+@use 'components/hero';
+@use 'components/btn-link';
+@use 'components/slider';
+@use 'components/slider-card';
+@use 'components/section';
+@use 'components/reviews';
+@use 'components/review';
+@use 'components/about';
+@use 'components/why-us';
+@use 'components/faq';
+@use 'components/form';
+@use 'components/footer';

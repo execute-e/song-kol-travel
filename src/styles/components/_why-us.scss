@@ -1,0 +1,57 @@
+@use '../helpers' as *;
+
+.why-us {
+    color: var(--text-color-light);
+    background-color: #36697F;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(40);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: column dense;
+        grid-template-rows: auto auto;
+        gap: rem(30) rem(20);
+        line-height: rem(28);
+
+        @include laptop {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: none;
+            grid-auto-flow: row;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: start;
+        column-gap: rem(10);
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(10);
+        }
+    }
+
+    &__number {
+        font-size: rem(84);
+
+        @include mobile-l {
+            font-size: rem(54);
+        }
+
+        &-overlay {
+            width: rem(80);
+            height: rem(80);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.burger-button {
+    --colorLine: var(--text-color-light);
+    --firstLineWidth: 65%;
+    --secondLineWidth: 85%;
+    --thirdLineWidth: 50%;
+
+    width: rem(40);
+    height: rem(40);
+    padding: 0;
+    padding-right: rem(3);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: rem(8);
+
+    @include hover {
+        --colorLine: var(--color-accent);
+        --firstLineWidth: 75%;
+        --secondLineWidth: 50%;
+        --thirdLineWidth: 85%; 
+    }
+
+    @include tablet-above {
+        display: none;
+    }
+
+    &__line {
+        background-color: var(--colorLine);
+        height: rem(4);
+        border-radius: rem(2);
+        display: inline-block;
+        width: var(--secondLineWidth);
+        transition: background-color 0.2s, width 0.2s;
+
+        &:first-child {
+            width: var(--firstLineWidth);
+        }
+
+        &:last-child {
+            width: var(--thirdLineWidth);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use '../helpers' as *;
+
+.burger-menu {
+    position: fixed;
+    display: flex;
+    inset: 0;
+    align-items: center;
+    background-color: #36697F;
+    color: var(--text-color-light);
+    transition: 
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    @include tablet-above {
+        display: none;
+    }
+
+    &__navigation {
+        flex-grow: 1;
+    }
+
+    &__list {
+        text-align: center;
+        font-size: rem(36);
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+    }
+
+    &__button {
+        position: absolute;
+        color: var(--text-color-light);
+        background: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include hover {
+            color: var(--color-accent);
+            transform: scale(1.2);
+        }
+    }
+}

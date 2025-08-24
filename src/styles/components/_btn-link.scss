@@ -1,0 +1,18 @@
+@use '../helpers' as *;
+
+.btn-link {
+    color: var(--text-color-light);
+    padding: rem(12) rem(24);
+    border: solid rem(2) var(--color-accent);
+    background-color: var(--color-accent);
+    border-radius: rem(4);
+
+    @include hover {
+        background-color: transparent;
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border-color: var(--text-color-light);
+    }
+}
