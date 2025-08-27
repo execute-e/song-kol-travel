@@ -155,12 +155,13 @@ h3, .h3 {
   overflow: clip;
 }
 
+[open]::details-content {
+  height: auto;
+}
+
 @supports (interpolate-size: allow-keywords) {
   :root {
     interpolate-size: allow-keywords;
-  }
-  [open]::details-content {
-    height: auto;
   }
 }
 textarea {
