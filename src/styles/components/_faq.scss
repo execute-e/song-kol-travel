@@ -45,6 +45,10 @@
         display: flex;
         align-items: center;
         padding: rem(8) rem(10) rem(8) 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         &::after {
             transition: transform 0.3s;

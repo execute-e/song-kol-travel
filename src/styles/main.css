@@ -918,6 +918,10 @@ svg * {
   display: flex;
   align-items: center;
   padding: 0.5rem 0.625rem 0.5rem 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .faq__summary::after {
   transition: transform 0.3s;
